@@ -224,7 +224,7 @@ button:hover{
     }
    
     body{
-        width: 130%;
+        width: 100%;
         //padding-left: 30px;
 
     }
@@ -248,18 +248,21 @@ button:hover{
         flex-basis: 100%;
     }
     .right-col{
-        margin-left: 0;
+        margin-left: -10;
         padding-left: 0;
+        flex-basis: 100%;
     }
+    
    
     .containern{
-        display: block;
+       flex-wrap: wrap;
         
     }
     .para{
-        display: block;
+        flex-wrap: wrap;
        margin-left: auto;
-       margin-right: -35px;
+       margin-right: auto;
+      
         width: 90%;
     }
     .container2{

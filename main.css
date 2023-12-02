@@ -2,10 +2,13 @@
 * {
   font-family: "Nunito Sans", sans-serif;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   background: rgb(241, 238, 238);
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -15,11 +18,21 @@ body {
   background: blue;
   padding: 20px;
   color: #fff;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .logo {
   font-size: 3rem;
   font-weight: 700;
+}
+
+nav {
+  margin-right: 50px;
 }
 
 nav ul li {
@@ -39,15 +52,17 @@ nav ul li a:hover {
 }
 
 .title {
-  margin-top: 20px;
   font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
-  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+  height: auto;
 }
 
 .container {
   display: flex;
+  width: 100%;
   padding: 20px;
   justify-content: space-between;
 }
@@ -67,6 +82,7 @@ nav ul li a:hover {
 
 .containern {
   display: flex;
+  align-items: center;
   padding: 20px;
   justify-content: space-between;
 }
@@ -213,6 +229,7 @@ button:hover {
   position: relative;
   transition: background 0.5s;
   font-family: "sans-serif";
+  overflow: hidden;
 }
 
 .profile-box img {
@@ -290,6 +307,10 @@ button:hover {
   margin: auto;
 }
 
+.menu {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .title {
     margin-left: 30px;
@@ -305,16 +326,7 @@ button:hover {
     font-size: 15px;
   }
   .header {
-    flex-wrap: wrap;
-    width: 100%;
-    top: 0;
-    margin-left: -10px;
-    margin-right: auto;
-    position: fixed;
-    z-index: 1;
-  }
-  body {
-    width: 100%;
+    flex-basis: 100%;
   }
   .logo {
     font-size: 30px;
@@ -322,26 +334,25 @@ button:hover {
   .wrap img {
     width: 400px;
   }
-  nav {
+  .hide {
     display: none;
   }
-  .title {
-    margin-top: 80px;
+  .menu {
+    display: block;
   }
-  .container {
+  .container, .containern {
     flex-wrap: wrap;
-    flex-basis: 100%;
   }
   .left-col {
-    flex-basis: 100%;
+    flex: 100%;
   }
   .right-col {
     margin-left: -10;
     padding-left: 0;
     flex-basis: 100%;
   }
-  .containern {
-    flex-wrap: wrap;
+  .right-col .bw img {
+    width: 100%;
   }
   .para {
     flex-wrap: wrap;
@@ -370,6 +381,11 @@ button:hover {
     width: 100%;
   }
 }
+footer {
+  padding: 0;
+  width: 100%;
+}
+
 .footer-content {
   width: 100%;
   display: flex;
@@ -378,6 +394,13 @@ button:hover {
   justify-content: space-around;
   padding: auto;
   padding: 0 0 0 80px;
+  position: sticky;
+  left: 0;
+  right: 0;
+}
+
+footer p {
+  font-size: 10px;
 }
 
 @media (max-width: 900px) {
@@ -397,4 +420,29 @@ button:hover {
 
 .media i {
   padding-right: 10px;
+}
+
+@media (max-width: 700px) {
+  .our-teams {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    flex-basis: 100%;
+    margin: auto;
+  }
+  .profile-row {
+    margin: auto;
+  }
+  .logo {
+    font-size: 24px;
+  }
+  .menu {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .menu svg {
+    margin-right: 0;
+    padding-right: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
